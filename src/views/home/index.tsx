@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Logo from "@assets/svg/rwf-white.svg";
 import { FaDownload } from "react-icons/fa";
+import Link from "next/link";
 
 const HomeView = () => {
   return (
@@ -33,13 +34,14 @@ const HomeView = () => {
           </div>
           <div>
             <p className="mb-2">Ahora puedes descargar la versión 1.0.0</p>
-            <button
+            <Link
+              href={`https://github.com/RapidWebForge/RapidWebForgeApp/releases/download/${process.env.NEXT_PUBLIC_INSTALLER_VERSION}/RapidWebForgeInstaller.exe`}
               className="bg-main hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
-              flex gap-2 items-center"
+              flex gap-2 items-center w-fit"
             >
               <span>Descargar</span>
               <FaDownload />
-            </button>
+            </Link>
           </div>
           <p className="text-xs mt-5">Solo disponible para Windows 11*</p>
         </div>

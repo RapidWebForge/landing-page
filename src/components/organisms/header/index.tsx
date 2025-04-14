@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Logo from "@assets/svg/rwf-white.svg";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { FaDownload, FaGithub } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -21,7 +21,11 @@ const Header = () => {
         >
           <FaGithub />
         </Link>
-        <button>Descargar</button>
+        <Link
+          href={`https://github.com/RapidWebForge/RapidWebForgeApp/releases/download/${process.env.NEXT_PUBLIC_INSTALLER_VERSION}/RapidWebForgeInstaller.exe`}
+        >
+          <FaDownload />
+        </Link>
       </div>
     </header>
   );
