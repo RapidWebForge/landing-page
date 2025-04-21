@@ -15,6 +15,9 @@ const Header = () => {
         <span>RapidWebForge</span>
       </Link>
       <div className="flex items-center gap-4">
+        <Link href="/contacto" className="mr-4 md:block hidden">
+          Contacto
+        </Link>
         <Link
           href="https://github.com/RapidWebForge/RapidWebForgeApp"
           target="_blank"
