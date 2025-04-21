@@ -33,7 +33,10 @@ const HomeView = () => {
             </p>
           </div>
           <div>
-            <p className="mb-2">Ahora puedes descargar la versión 1.0.0</p>
+            <p className="mb-2">
+              Ahora puedes descargar la versión{" "}
+              {process.env.NEXT_PUBLIC_INSTALLER_VERSION}
+            </p>
             <Link
               href={`https://github.com/RapidWebForge/RapidWebForgeApp/releases/download/${process.env.NEXT_PUBLIC_INSTALLER_VERSION}/RapidWebForgeInstaller.exe`}
               className="bg-main hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
