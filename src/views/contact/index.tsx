@@ -54,30 +54,40 @@ const ContactView = () => {
           opinión sobre RapidWebForge y cómo podemos seguir mejorando la
           experiencia.
         </p>
-        <form action="" className="flex flex-col gap-5 mt-15">
+        <form
+          action={`https://submit-form.com/${process.env.NEXT_PUBLIC_FORMSPARK_ID}`}
+          className="flex flex-col gap-5 mt-15"
+        >
           <div className="flex md:flex-row flex-col gap-10">
             <div className="flex flex-col gap-5 flex-1/2">
-              <label htmlFor="">Nombre</label>
+              <label htmlFor="name">Nombre</label>
               <input
                 type="text"
+                id="name"
+                name="name"
+                required
                 className="border-b focus:outline-none placeholder:text-gray-400"
                 placeholder="John Doe"
               />
             </div>
             <div className="flex flex-col gap-5 flex-1/2">
-              <label htmlFor="">Correo electrónico</label>
+              <label htmlFor="email">Correo electrónico</label>
               <input
                 type="text"
+                id="email"
+                name="email"
+                required
                 className="border-b focus:outline-none placeholder:text-gray-400"
                 placeholder="john.doe@example.com"
               />
             </div>
           </div>
           <div className="flex flex-col gap-5">
-            <label htmlFor="">Mensaje</label>
+            <label htmlFor="message">Mensaje</label>
             <textarea
-              name=""
-              id=""
+              id="message"
+              name="message"
+              required
               className="border-b focus:outline-none placeholder:text-gray-400 resize-none"
               placeholder="Escribe aquí tu mensaje"
             ></textarea>
