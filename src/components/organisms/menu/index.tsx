@@ -26,15 +26,20 @@ const Menu = ({ show, onClose }: MenuProps) => {
             <IoClose size={20} />
           </button>
           <div className="flex flex-col items-center gap-5">
-            <Link
-              href="/"
-              onClick={onClose}
-            >
+            <Link href="/" onClick={onClose}>
               Home
+            </Link>
+            <Link
+              href="/validation"
+              onClick={onClose}
+              className="font-mono text-green-400 animate-pulse font-semibold"
+            >
+              Validación
             </Link>
             <Link
               href="https://rapidwebforge-docs.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
               onClick={onClose}
             >
               Documentación

@@ -26,11 +26,18 @@ const Header = () => {
       >
         <IoIosMenu size={20} />
       </button>
-      <Menu show={showMenu} onClose={() => setShowMenu(false)}/>
+      <Menu show={showMenu} onClose={() => setShowMenu(false)} />
       <div className="md:flex items-center gap-4 hidden">
+        <Link
+          href="/validacion"
+          className="mr-4 font-mono text-green-400 animate-pulse font-semibold"
+        >
+          Validación
+        </Link>
         <Link
           href="https://rapidwebforge-docs.netlify.app/"
           target="_blank"
+          rel="noopener noreferrer"
           className="mr-4"
         >
           Documentación
